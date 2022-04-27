@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="sv" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled 3</title>
+<script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style type="text/css">
+.style1 {
+	font-family: "Eras Medium ITC";
+	text-align: center;
+}
+.style2 {
+	text-align: center;
+}
+</style>
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'button42.jpg',/*url*/'button43.jpg')">
+
+<p>&nbsp;</p>
+<p class="style1">Välkommen till Innebandykorpens nya hemsida med ny touch and feel. Här kommer 
+du finna<br />
+all information om matcherna och mycket annat.</p>
+<p class="style1">Vill du vara med? Skicka ett mejl till sektionsledaren för innebandyn.</p>
+<p class="style2">
+<a href="mailto:andreas.hogvall@atg.se?subject=Sign me up">
+<img style="border: 0" id="img8" src="button41.jpg" height="31" width="100" alt="Button Text" onmouseover="FP_swapImg(1,0,/*id*/'img8',/*url*/'button42.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img8',/*url*/'button41.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img8',/*url*/'button41.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img8',/*url*/'button42.jpg')" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Rectangle 5" fp-title="Button Text" --></p>
+<p class="style2">
+
+</a></p>
+
+</body>
+
+</html>

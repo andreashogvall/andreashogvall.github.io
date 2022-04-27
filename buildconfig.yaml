@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: innebandykorpen
+  name: innebandykorpen
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: innebandykorpen:latest
+  resources: {}
+  source:
+    git:
+      ref: master
+      uri: https://github.com/andreashogvall/innebandykorpen.git
+    contextDir: hhvm/
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: innebandykorpen-webserver:latest
+        namespace: innebandykorpen-registry
+    type: Docker
