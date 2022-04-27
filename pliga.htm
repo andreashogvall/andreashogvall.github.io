@@ -5,813 +5,814 @@
   <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
   <script src="alterrow.js" defer></script>
+  <script src="sort-table.js"></script>
 </head>
 
 <body>
   <div class="border-0">
-    <table class="mx-auto border-2 border-black">
+    <table x-data="data()" class="mx-auto">
       <thead>
         <tr>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             #
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             NR
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             SPELARE
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             POSITION
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             SM
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             UTV
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             MÅL
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             ASS
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             SNITT
           </th>
-          <th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
             TOTAL
           </th>
         </tr>
       </thead>
-      <tbody>
-
-        <tr class="table-row">
-          <td>
+      <tbody x-ref="tbody">
+        <tr class=" table-row">
+          <td class="py-1 px-2">
             1
           </td>
-          <td>
+          <td class="py-1 px-2">
             21
           </td>
-          <td>
+          <td class="py-1 px-2">
             Andreas Edman
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             11
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             37
           </td>
-          <td>
+          <td class="py-1 px-2">
             20
           </td>
-          <td>
+          <td class="py-1 px-2">
             5,9
           </td>
-          <td>
+          <td class="py-1 px-2">
             57
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             2
           </td>
-          <td>
+          <td class="py-1 px-2">
             X
           </td>
-          <td>
+          <td class="py-1 px-2">
             Wilhelm Askebring
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             10
           </td>
-          <td>
+          <td class="py-1 px-2">
             1
           </td>
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             32
           </td>
-          <td>
+          <td class="py-1 px-2">
             4,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             41
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             3
           </td>
-          <td>
+          <td class="py-1 px-2">
             84
           </td>
-          <td>
+          <td class="py-1 px-2">
             Axel Holmström
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             11
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             21
           </td>
-          <td>
+          <td class="py-1 px-2">
             15
           </td>
-          <td>
+          <td class="py-1 px-2">
             3,4
           </td>
-          <td>
+          <td class="py-1 px-2">
             36
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             7
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Fredrik Andersson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             7
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             10
           </td>
-          <td>
+          <td class="py-1 px-2">
             5
           </td>
-          <td>
+          <td class="py-1 px-2">
             2,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             15
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             6
           </td>
-          <td>
+          <td class="py-1 px-2">
             17
           </td>
-          <td>
+          <td class="py-1 px-2">
             Andreas Högvall
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             5
           </td>
-          <td>
+          <td class="py-1 px-2">
             1,5
           </td>
-          <td>
+          <td class="py-1 px-2">
             14
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Fredrik Stjerndorff
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             2,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             13
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             5
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Jan Sonnevi
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             2
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             5
           </td>
-          <td>
+          <td class="py-1 px-2">
             2
           </td>
-          <td>
+          <td class="py-1 px-2">
             3,5
           </td>
-          <td>
+          <td class="py-1 px-2">
             7
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             8
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Tomas Klasson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             2
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
-          <td>
+          <td class="py-1 px-2">
             2,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             9
           </td>
-          <td>
+          <td class="py-1 px-2">
             99
           </td>
-          <td>
+          <td class="py-1 px-2">
             Per-Anders Nygård
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             2
           </td>
-          <td>
+          <td class="py-1 px-2">
             1
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
-          <td>
+          <td class="py-1 px-2">
             2,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             4
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             10
           </td>
-          <td>
+          <td class="py-1 px-2">
             8
           </td>
-          <td>
+          <td class="py-1 px-2">
             Håkan Fröberg
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             11
           </td>
-          <td>
+          <td class="py-1 px-2">
             10
           </td>
-          <td>
+          <td class="py-1 px-2">
             Rasmus Sturve
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             12
           </td>
-          <td>
+          <td class="py-1 px-2">
             24
           </td>
-          <td>
+          <td class="py-1 px-2">
             Tobias Wallin
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             13
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Mikael Martinsson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             14
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Fredrik Blomqvist
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             15
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Fredrik Millberg
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             16
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Danne Nilsson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             17
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Ludvig Bergman
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             18
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Kristoffer Emanuelsson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             19
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Sebbe
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             20
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Filip Sundin
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             21
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Fredrik Ståhl
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             22
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Jimmy Karlsson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             23
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Per Pettersson
           </td>
-          <td>
+          <td class="py-1 px-2">
             Back
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
         <tr class="table-row">
-          <td>
+          <td class="py-1 px-2">
             24
           </td>
-          <td>
+          <td class="py-1 px-2">
             XX
           </td>
-          <td>
+          <td class="py-1 px-2">
             Jimmy Åkerman
           </td>
-          <td>
+          <td class="py-1 px-2">
             Forward
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0,0
           </td>
-          <td>
+          <td class="py-1 px-2">
             0
           </td>
         </tr>
