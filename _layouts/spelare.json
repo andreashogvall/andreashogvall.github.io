@@ -1,0 +1,16 @@
+{
+	"playdata": [
+{% for spel in site.data.spelare %}{ {% assign sm_f = spel.sm | times: 1.0 %} {% assign tot = spel.goal | plus: spel.ass %}
+{% if spel.nr %}    "nr":  {{ spel.nr }},{% else %}    "nr":  "XX",  {% endif %}
+    "name": "{{ spel.name }}",
+    "pos": "{{ spel.pos }}",
+    "sm": {{ spel.sm }},
+    "utv": {{ spel.utv }},
+    "goal": {{ spel.goal }},
+    "ass": {{ spel.ass }},
+    "avg":  {% if spel.sm > 0 %} {{ tot | divided_by: sm_f | round: 1  }}, {% else %} 0.0, {% endif %}
+    "total": {{ tot }}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+	]
+}
