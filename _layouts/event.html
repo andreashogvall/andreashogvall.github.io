@@ -2,15 +2,8 @@
 layout: default
 ---
 <article class="text-gray-700 sm:mx-12 mb-16">
-  <h1 class="text-3xl text-blue-800 font-normal">{{ page.title }}</h1>
-  <header>
-    <div class="text-sm text-blue-800">{{ page.date }}</div>
-  </header>
-  <div class="flex border-0 flex-wrap-reverse lg:flex-wrap border-black">
-    <div class="p-6 min-w-64 max-w-2xl text-justify text-lg bg-indigo-50">
-      {{ page.content | markdownify }}
-    </div>
-    <div class="mx-10 lg:mx-20 py-20 shrink-0 h-auto w-96">
+  <h1 class="text-3xl px-20 py-10 text-blue-800 font-normal">{{ page.title }}</h1>
+    <div class="mx-10 lg:mx-20 shrink-0 h-auto">
       <img src="{{ page.image }}">
     </div>
   </div>
