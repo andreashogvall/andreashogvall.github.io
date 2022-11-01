@@ -32,6 +32,10 @@ plugins:
 
 permalink: pretty
 
+collections:
+  events:
+    output: true
+
 excerpt_separator: <!--more-->
 
 # Exclude from processing.
