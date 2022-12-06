@@ -1,0 +1,829 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="alterrow.js" defer></script>
+  <script src="sort-table.js"></script>
+</head>
+
+<body>
+  <div class="border-0">
+	  <table x-data="data()" class="mx-auto">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <thead>
+        <tr>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            #
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            NR
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            SPELARE
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            POSITION
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            SM
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            UTV
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            MÅL
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            ASS
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            SNITT
+          </th>
+          <th @click="sortByColumn" class="cursor-pointer select-none border-black border-b-2">
+            TOTAL
+          </th>
+        </tr>
+      </thead>
+      <tbody x-ref="tbody">
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            2
+          </td>
+          <td class="py-1 px-2">
+            X
+          </td>
+          <td class="py-1 px-2">
+            Fredrik Andersson
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            9
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            24
+          </td>
+          <td class="py-1 px-2">
+            14
+          </td>
+          <td class="py-1 px-2">
+            4,4
+          </td>
+          <td class="py-1 px-2">
+            38
+          </td>
+        </tr>
+        <tr class=" table-row">
+          <td class="py-1 px-2">
+            1
+          </td>
+          <td class="py-1 px-2">
+            21
+          </td>
+          <td class="py-1 px-2">
+            Axel Holmström
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            7
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            12
+          </td>
+          <td class="py-1 px-2">
+            16
+          </td>
+          <td class="py-1 px-2">
+            4,0
+          </td>
+          <td class="py-1 px-2">
+            28
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            4
+          </td>
+          <td class="py-1 px-2">
+            17
+          </td>
+          <td class="py-1 px-2">
+            Andreas Högvall
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            9
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            17
+          </td>
+          <td class="py-1 px-2">
+            11
+          </td>
+          <td class="py-1 px-2">
+            3,4
+          </td>
+          <td class="py-1 px-2">
+            28
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            5
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Björn Järnankar
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            7
+          </td>
+          <td class="py-1 px-2">
+            1
+          </td>
+          <td class="py-1 px-2">
+            13
+          </td>
+          <td class="py-1 px-2">
+            16
+          </td>
+          <td class="py-1 px-2">
+            4,4
+          </td>
+          <td class="py-1 px-2">
+            29
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            3
+          </td>
+          <td class="py-1 px-2">
+            84
+          </td>
+          <td class="py-1 px-2">
+            Wilhelm Askebring
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            6
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            11
+          </td>
+          <td class="py-1 px-2">
+            11
+          </td>
+          <td class="py-1 px-2">
+            3,8
+          </td>
+          <td class="py-1 px-2">
+            22
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            6
+          </td>
+          <td class="py-1 px-2">
+            20
+          </td>
+          <td class="py-1 px-2">
+            Andreas Edman
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            2
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            7
+          </td>
+          <td class="py-1 px-2">
+            2
+          </td>
+          <td class="py-1 px-2">
+            4,5
+          </td>
+          <td class="py-1 px-2">
+            9
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            7
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Fredrik Stjerndorff
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            4
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            4
+          </td>
+          <td class="py-1 px-2">
+            8
+          </td>
+          <td class="py-1 px-2">
+            3,0
+          </td>
+          <td class="py-1 px-2">
+            12
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            8
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Jan Sonnevi
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            9
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Tomas Klasson
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            10
+          </td>
+          <td class="py-1 px-2">
+            99
+          </td>
+          <td class="py-1 px-2">
+            Per-Anders Nygård
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            11
+          </td>
+          <td class="py-1 px-2">
+            8
+          </td>
+          <td class="py-1 px-2">
+            Håkan Fröberg
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            12
+          </td>
+          <td class="py-1 px-2">
+            24
+          </td>
+          <td class="py-1 px-2">
+            Tobias Wallin
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            13
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Mikael Martinsson
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            14
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Fredrik Blomqvist
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            15
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Fredrik Millberg
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            16
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Danne Nilsson
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            17
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Ludvig Bergman
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            18
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Kristoffer Emanuelsson
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            19
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Sebbe
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            20
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Filip Sundin
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            21
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Fredrik Ståhl
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            22
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Jimmy Karlsson
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            23
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Per Pettersson
+          </td>
+          <td class="py-1 px-2">
+            Back
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="py-1 px-2">
+            24
+          </td>
+          <td class="py-1 px-2">
+            XX
+          </td>
+          <td class="py-1 px-2">
+            Jimmy Åkerman
+          </td>
+          <td class="py-1 px-2">
+            Forward
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+          <td class="py-1 px-2">
+            0,0
+          </td>
+          <td class="py-1 px-2">
+            0
+          </td>
+        </tr>
+      </tbody>
+    </table>
+        </tr>
+    <div class="text-lg text-black text-center mx-auto">
+      Sortering på: Total poäng, antal gjorda mål, flest spelade matcher, bäst snitt, färst utvisningar, bokstavsordning.
+    </div>
+  </div>
+</body>
+
+</html>
