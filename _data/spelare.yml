@@ -8,17 +8,17 @@
 - name: Axel Holmström
   nr: 21
   pos: Forward
-  sm: 4
+  sm: 6
   utv: 0
-  goal: 12
-  ass: 9
+  goal: 19
+  ass: 12
 
 - name: Fredrik Andersson
   pos: Forward
-  sm: 4
+  sm: 6
   utv: 0
-  goal: 12
-  ass: 11
+  goal: 19
+  ass: 15
 
 - name: Wilhelm Askebring
   nr: 84
@@ -46,10 +46,10 @@
 
 - name: Fredrik Stjerndorff
   pos: Back
-  sm: 2
+  sm: 4
   utv: 0
-  goal: 1
-  ass: 5
+  goal: 3
+  ass: 13
 
 - name: Jan Sonnevi
   pos: Forward
@@ -103,12 +103,12 @@
   goal: 0
   ass: 0
 
-- name: Fredrik Millberg
+- name: Joakim Nordqvist
   pos: Forward
-  sm: 0
+  sm: 2
   utv: 0
-  goal: 0
-  ass: 0
+  goal: 2
+  ass: 3
 
 - name: Danne Nilsson
   pos: Back
@@ -124,19 +124,12 @@
   goal: 0
   ass: 0
 
-- name: Kristoffer Emanuelsson
-  pos: Back
-  sm: 0
-  utv: 0
-  goal: 0
-  ass: 0
-
-- name: Sebbe
+- name: Jesper Friberg
   pos: Forward
-  sm: 0
+  sm: 2
   utv: 0
-  goal: 0
-  ass: 0
+  goal: 3
+  ass: 3
 
 - name: Filip Sundin
   pos: Forward
