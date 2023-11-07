@@ -1,24 +1,24 @@
 - name: Andreas Högvall
   pos: Back
-  sm: 4
+  sm: 6
   utv: 0
-  goal: 13
-  ass: 6
+  goal: 19
+  ass: 11
 
 - name: Axel Holmström
   nr: 21
   pos: Forward
-  sm: 6
+  sm: 8
   utv: 0
-  goal: 19
-  ass: 12
+  goal: 33
+  ass: 14
 
 - name: Fredrik Andersson
   pos: Forward
-  sm: 6
+  sm: 8
   utv: 0
-  goal: 19
-  ass: 15
+  goal: 23
+  ass: 24
 
 - name: Wilhelm Askebring
   nr: 84
@@ -46,10 +46,10 @@
 
 - name: Fredrik Stjerndorff
   pos: Back
-  sm: 4
+  sm: 6
   utv: 0
   goal: 3
-  ass: 13
+  ass: 19
 
 - name: Jan Sonnevi
   pos: Forward
