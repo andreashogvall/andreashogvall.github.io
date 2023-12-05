@@ -14,6 +14,7 @@ permalink: /events/
 <div class="flex shrink-0 flex-wrap">
     {% assign events = site.events | sort: 'weight' | reverse %}
     {% for event in events %}
+    {% assign check = event.image | split:'.' | last %}
     <div class="py-4 px-3 mx-auto flex items-center">
         <div class="">
             <div class="max-w-sm shadow-lg bg-white bg-opacity-75 rounded-lg overflow-hidden shadow-lg">
@@ -21,7 +22,16 @@ permalink: /events/
                     <div class="font-bold text-3xl">
                         {{ event.comment }}
                     </div>
-                    <a href="{{ event.url }}"><img src="{{ event.image }}"></a>
+                    <a href="{{ event.url }}">
+                        {% if check == "mp4" %}
+                        <video controls>
+                          <source src="{{ event.image }}" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        {% else %}
+                          <img src="{{ event.image }}">
+                        {% endif %}
+                    </a>
               </div>
             </div>
         </div>

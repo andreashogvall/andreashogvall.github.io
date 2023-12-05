@@ -1,10 +1,18 @@
 ---
 layout: default
 ---
+{% assign check = page.image | split:'.' | last %}
 <article class="text-gray-700 sm:mx-12 mb-16">
   <h1 class="text-3xl px-20 py-10 text-blue-800 font-normal">{{ page.title }}</h1>
     <div class="mx-10 lg:mx-20 shrink-0 h-auto">
-      <img src="{{ page.image }}">
+      {% if check == "mp4" %}
+      <video controls>
+        <source src="{{ page.image }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+        <img src="{{ page.image }}">
+      {% endif %}
     </div>
   </div>
 </article>
