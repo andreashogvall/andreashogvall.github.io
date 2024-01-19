@@ -105,10 +105,10 @@
 
 - name: Joakim Nordqvist
   pos: Forward
-  sm: 2
+  sm: 0
   utv: 0
-  goal: 2
-  ass: 3
+  goal: 0
+  ass: 0
 
 - name: Danne Nilsson
   pos: Back
