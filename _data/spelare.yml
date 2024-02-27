@@ -1,17 +1,17 @@
 - name: Andreas Högvall
   pos: Back
-  sm: 6
+  sm: 8
   utv: 0
-  goal: 14
-  ass: 10
+  goal: 18
+  ass: 15
 
 - name: Axel Holmström
   nr: 21
   pos: Forward
-  sm: 6
+  sm: 8
   utv: 0
-  goal: 19
-  ass: 17
+  goal: 26
+  ass: 22
 
 - name: Fredrik Andersson
   pos: Forward
@@ -39,17 +39,17 @@
 - name: Andreas Edman
   nr: 20
   pos: Forward
-  sm: 2
+  sm: 4
   utv: 0
-  goal: 5
-  ass: 5
+  goal: 9
+  ass: 9
 
 - name: Fredrik Stjerndorff
   pos: Back
-  sm: 6
+  sm: 8
   utv: 0
   goal: 2
-  ass: 8
+  ass: 12
 
 - name: Jan Sonnevi
   pos: Forward
@@ -81,13 +81,13 @@
   goal: 0
   ass: 0
 
-- name: Tobias Wallin
+- name: Craig Canada
   nr: 24
   pos: Back
-  sm: 0
+  sm: 2
   utv: 0
-  goal: 0
-  ass: 0
+  goal: 3
+  ass: 2
 
 - name: Mikael Martinsson
   pos: Forward
@@ -147,10 +147,10 @@
 
 - name: Jimmy Karlsson
   pos: Forward
-  sm: 2
+  sm: 4
   utv: 0
-  goal: 14
-  ass: 3
+  goal: 19
+  ass: 5
 
 - name: Per Pettersson
   pos: Back
