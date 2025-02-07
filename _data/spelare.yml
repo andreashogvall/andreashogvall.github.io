@@ -60,10 +60,10 @@
 
 - name: Rickard Hedman
   pos: Forward
-  sm: 2
+  sm: 0
   utv: 0
-  goal: 6
-  ass: 3
+  goal: 0
+  ass: 0
 
 - name: Oskar Risinger
   nr: 6
