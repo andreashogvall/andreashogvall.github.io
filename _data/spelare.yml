@@ -67,7 +67,7 @@
 
 - name: Oskar Risinger
   nr: 6
-  pos: Back
+  pos: Forward
   sm: 7
   utv: 0
   goal: 22
@@ -83,7 +83,7 @@
 
 - name: Robin Johansson
   nr: 12
-  pos: Back
+  pos: Forward
   sm: 6
   utv: 0
   goal: 52
