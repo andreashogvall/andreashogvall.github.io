@@ -1,33 +1,33 @@
 - name: Andreas Högvall
   nr: 17
   pos: Back
-  sm: 9
+  sm: 0
   utv: 0
-  goal: 21
-  ass: 15
+  goal: 0
+  ass: 0
 
 - name: Axel Holmström
   nr: 21
   pos: Forward
-  sm: 10
+  sm: 0
   utv: 0
-  goal: 41
-  ass: 30
+  goal: 0
+  ass: 0
 
 - name: Fredrik Andersson
   pos: Forward
-  sm: 5
+  sm: 0
   utv: 0
-  goal: 17
-  ass: 18
+  goal: 0
+  ass: 0
 
 - name: Wilhelm Askebring
   nr: 84
   pos: Back
-  sm: 7
+  sm: 0
   utv: 0
-  goal: 5
-  ass: 16
+  goal: 0
+  ass: 0
 
 - name: Björn Järnankar
   pos: Back
@@ -39,17 +39,17 @@
 - name: Andreas Edman
   nr: 20
   pos: Forward
-  sm: 1
+  sm: 0
   utv: 0
-  goal: 3
-  ass: 5
+  goal: 0
+  ass: 0
 
 - name: Fredrik Stjerndorff
   pos: Back
-  sm: 8
+  sm: 0
   utv: 0
-  goal: 2
-  ass: 24
+  goal: 0
+  ass: 0
 
 - name: Jan Sonnevi
   pos: Forward
@@ -68,10 +68,10 @@
 - name: Oskar Risinger
   nr: 6
   pos: Forward
-  sm: 7
+  sm: 0
   utv: 0
-  goal: 22
-  ass: 22
+  goal: 0
+  ass: 0
 
 - name: Håkan Fröberg
   nr: 8
@@ -84,10 +84,10 @@
 - name: Robin Johansson
   nr: 12
   pos: Forward
-  sm: 6
+  sm: 0
   utv: 0
-  goal: 52
-  ass: 21
+  goal: 0
+  ass: 0
 
 - name: Mikael Martinsson
   pos: Forward
