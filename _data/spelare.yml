@@ -68,10 +68,10 @@
 - name: Oskar Risinger
   nr: 6
   pos: Forward
-  sm: 2
+  sm: 0
   utv: 0
-  goal: 7
-  ass: 3
+  goal: 0
+  ass: 0
 
 - name: Håkan Fröberg
   nr: 8
@@ -105,10 +105,10 @@
 
 - name: Viktor Wendel
   pos: Forward
-  sm: 7
+  sm: 0
   utv: 0
-  goal: 11
-  ass: 6
+  goal: 0
+  ass: 0
 
 - name: Jesper Bruksner
   pos: Forward
